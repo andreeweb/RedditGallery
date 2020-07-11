@@ -8,10 +8,30 @@
 
 import UIKit
 
-class Coordinator: CoordinatorProtocol {
+class Coordinator: UIViewController {
     
-    func initCoordinator() -> UIViewController {
+    private var current: UIViewController
+    
+    init() {
         
-        return UIViewController()
+        // define here the app entry point
+        let galleryCoordinator = GalleryCoordinator().initCoordinator()
+        current = galleryCoordinator
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+        addChild(current)
+        current.view.frame = view.bounds
+        view.addSubview(current.view)
+        current.didMove(toParent: self)
     }
 }

@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol GalleryCoordinatorProtocol {
+protocol GalleryCoordinatorProtocol: CoordinatorProtocol {
     
 }

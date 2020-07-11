@@ -29,6 +29,13 @@ class GalleryCoordinator: UITabBarController {
 
 }
 
-extension GalleryCoordinatorProtocol {
+extension GalleryCoordinator: GalleryCoordinatorProtocol {
     
+    func initCoordinator() -> UIViewController {
+        
+        let controller = UIStoryboard(name: "Gallery", bundle: nil)
+            .instantiateTabBarController(withIdentifier: "GalleryTabBarController") as! GalleryCoordinator
+        
+        return controller
+    }
 }

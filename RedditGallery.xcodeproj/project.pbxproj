@@ -20,6 +20,7 @@
 		1D27B44624B9D691000AEC9B /* GallerySettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B44524B9D691000AEC9B /* GallerySettingsViewModel.swift */; };
 		1D27B44824B9D6B1000AEC9B /* GallerySettingsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B44724B9D6B1000AEC9B /* GallerySettingsViewModelProtocol.swift */; };
 		1D27B44A24B9DB7A000AEC9B /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B44924B9DB7A000AEC9B /* CoordinatorProtocol.swift */; };
+		1D27B44D24B9E1AA000AEC9B /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B44C24B9E1AA000AEC9B /* UIStoryboardExtension.swift */; };
 		1D8997D224B8E54500003315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8997D124B8E54500003315 /* AppDelegate.swift */; };
 		1D8997D424B8E54500003315 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8997D324B8E54500003315 /* SceneDelegate.swift */; };
 		1D8997DB24B8E54500003315 /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8997D924B8E54500003315 /* Gallery.storyboard */; };
@@ -61,6 +62,7 @@
 		1D27B44524B9D691000AEC9B /* GallerySettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallerySettingsViewModel.swift; sourceTree = "<group>"; };
 		1D27B44724B9D6B1000AEC9B /* GallerySettingsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallerySettingsViewModelProtocol.swift; sourceTree = "<group>"; };
 		1D27B44924B9DB7A000AEC9B /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		1D27B44C24B9E1AA000AEC9B /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
 		1D8997CE24B8E54500003315 /* RedditGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedditGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8997D124B8E54500003315 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D8997D324B8E54500003315 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +163,14 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		1D27B44B24B9E196000AEC9B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1D27B44C24B9E1AA000AEC9B /* UIStoryboardExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		1D8997C524B8E54500003315 = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +200,7 @@
 				1D8997D324B8E54500003315 /* SceneDelegate.swift */,
 				1D27B44924B9DB7A000AEC9B /* CoordinatorProtocol.swift */,
 				1D27B42A24B9D08E000AEC9B /* Coordinator.swift */,
+				1D27B44B24B9E196000AEC9B /* Extension */,
 				1D27B43A24B9D3CB000AEC9B /* Entities */,
 				1D27B43824B9D390000AEC9B /* Modules */,
 				1D27B43924B9D39F000AEC9B /* Services */,
@@ -451,6 +462,7 @@
 				1D27B42B24B9D08E000AEC9B /* Coordinator.swift in Sources */,
 				1D27B43024B9D284000AEC9B /* GalleryViewController.swift in Sources */,
 				1D8997D224B8E54500003315 /* AppDelegate.swift in Sources */,
+				1D27B44D24B9E1AA000AEC9B /* UIStoryboardExtension.swift in Sources */,
 				1D27B44824B9D6B1000AEC9B /* GallerySettingsViewModelProtocol.swift in Sources */,
 				1D27B44224B9D65B000AEC9B /* GallerySettingsViewController.swift in Sources */,
 				1D27B44A24B9DB7A000AEC9B /* CoordinatorProtocol.swift in Sources */,
