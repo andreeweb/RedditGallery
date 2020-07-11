@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		060C826D50A4A0014B3EF5C9 /* Pods_RedditGallery_RedditGalleryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0AF869FF28A7F77DA02FCE4 /* Pods_RedditGallery_RedditGalleryUITests.framework */; };
+		1C31106958119DF75C244E50 /* Pods_RedditGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD02A1594498E9EF1537264 /* Pods_RedditGallery.framework */; };
 		1D27B42B24B9D08E000AEC9B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B42A24B9D08E000AEC9B /* Coordinator.swift */; };
 		1D27B43024B9D284000AEC9B /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B42F24B9D284000AEC9B /* GalleryViewController.swift */; };
 		1D27B43224B9D2A2000AEC9B /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B43124B9D2A2000AEC9B /* GalleryViewModel.swift */; };
@@ -28,8 +28,8 @@
 		1D8997E024B8E54600003315 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8997DE24B8E54600003315 /* LaunchScreen.storyboard */; };
 		1D8997EB24B8E54700003315 /* RedditGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8997EA24B8E54700003315 /* RedditGalleryTests.swift */; };
 		1D8997F624B8E54700003315 /* RedditGalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8997F524B8E54700003315 /* RedditGalleryUITests.swift */; };
-		89431F5E5FC3C6584D6806BF /* Pods_RedditGalleryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D8B14AE1B18EBF1F338064 /* Pods_RedditGalleryTests.framework */; };
-		F0F637391B230F2660874161 /* Pods_RedditGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9F5A8A5E5CF45D812A0BC6 /* Pods_RedditGallery.framework */; };
+		94D680211739EE5CD480E049 /* Pods_RedditGalleryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 240A3510B1B0E4F3998429C1 /* Pods_RedditGalleryTests.framework */; };
+		B32AEF548914684F8D7E3375 /* Pods_RedditGallery_RedditGalleryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F031DC47C4C311DFACCC75 /* Pods_RedditGallery_RedditGalleryUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,12 +77,12 @@
 		1D8997F524B8E54700003315 /* RedditGalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditGalleryUITests.swift; sourceTree = "<group>"; };
 		1D8997F724B8E54700003315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F67F3322E5925BA0809DAED /* Pods-RedditGallery-RedditGalleryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedditGallery-RedditGalleryUITests.debug.xcconfig"; path = "Target Support Files/Pods-RedditGallery-RedditGalleryUITests/Pods-RedditGallery-RedditGalleryUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		240A3510B1B0E4F3998429C1 /* Pods_RedditGalleryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedditGalleryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F18D26048C8D90A5C4D122 /* Pods-RedditGallery-RedditGalleryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedditGallery-RedditGalleryUITests.release.xcconfig"; path = "Target Support Files/Pods-RedditGallery-RedditGalleryUITests/Pods-RedditGallery-RedditGalleryUITests.release.xcconfig"; sourceTree = "<group>"; };
-		5B9F5A8A5E5CF45D812A0BC6 /* Pods_RedditGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedditGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C2EC68A83C1FE1E351CFA2 /* Pods-RedditGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedditGallery.debug.xcconfig"; path = "Target Support Files/Pods-RedditGallery/Pods-RedditGallery.debug.xcconfig"; sourceTree = "<group>"; };
-		83D8B14AE1B18EBF1F338064 /* Pods_RedditGalleryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedditGalleryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF531BB9EACA00D2972CFFE /* Pods-RedditGalleryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedditGalleryTests.release.xcconfig"; path = "Target Support Files/Pods-RedditGalleryTests/Pods-RedditGalleryTests.release.xcconfig"; sourceTree = "<group>"; };
-		A0AF869FF28A7F77DA02FCE4 /* Pods_RedditGallery_RedditGalleryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedditGallery_RedditGalleryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7F031DC47C4C311DFACCC75 /* Pods_RedditGallery_RedditGalleryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedditGallery_RedditGalleryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBD02A1594498E9EF1537264 /* Pods_RedditGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedditGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC003FC5AF1A8BB0569558A0 /* Pods-RedditGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedditGallery.release.xcconfig"; path = "Target Support Files/Pods-RedditGallery/Pods-RedditGallery.release.xcconfig"; sourceTree = "<group>"; };
 		E718EB01636B625000BBA55D /* Pods-RedditGalleryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedditGalleryTests.debug.xcconfig"; path = "Target Support Files/Pods-RedditGalleryTests/Pods-RedditGalleryTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0F637391B230F2660874161 /* Pods_RedditGallery.framework in Frameworks */,
+				1C31106958119DF75C244E50 /* Pods_RedditGallery.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89431F5E5FC3C6584D6806BF /* Pods_RedditGalleryTests.framework in Frameworks */,
+				94D680211739EE5CD480E049 /* Pods_RedditGalleryTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				060C826D50A4A0014B3EF5C9 /* Pods_RedditGallery_RedditGalleryUITests.framework in Frameworks */,
+				B32AEF548914684F8D7E3375 /* Pods_RedditGallery_RedditGalleryUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,9 +232,9 @@
 		C22217108A51061148A511BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5B9F5A8A5E5CF45D812A0BC6 /* Pods_RedditGallery.framework */,
-				A0AF869FF28A7F77DA02FCE4 /* Pods_RedditGallery_RedditGalleryUITests.framework */,
-				83D8B14AE1B18EBF1F338064 /* Pods_RedditGalleryTests.framework */,
+				DBD02A1594498E9EF1537264 /* Pods_RedditGallery.framework */,
+				A7F031DC47C4C311DFACCC75 /* Pods_RedditGallery_RedditGalleryUITests.framework */,
+				240A3510B1B0E4F3998429C1 /* Pods_RedditGalleryTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -263,6 +263,7 @@
 				1D8997CA24B8E54500003315 /* Sources */,
 				1D8997CB24B8E54500003315 /* Frameworks */,
 				1D8997CC24B8E54500003315 /* Resources */,
+				BB2C98A2B9C42B44C5CD7A42 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,6 +282,7 @@
 				1D8997E224B8E54700003315 /* Sources */,
 				1D8997E324B8E54700003315 /* Frameworks */,
 				1D8997E424B8E54700003315 /* Resources */,
+				F68BD5A5C9961B04A5E8390A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -300,6 +302,7 @@
 				1D8997ED24B8E54700003315 /* Sources */,
 				1D8997EE24B8E54700003315 /* Frameworks */,
 				1D8997EF24B8E54700003315 /* Resources */,
+				BB33A3C4C54EE9BB4C8A0E11 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -426,6 +429,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BB2C98A2B9C42B44C5CD7A42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RedditGallery/Pods-RedditGallery-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RedditGallery/Pods-RedditGallery-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RedditGallery/Pods-RedditGallery-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB33A3C4C54EE9BB4C8A0E11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RedditGallery-RedditGalleryUITests/Pods-RedditGallery-RedditGalleryUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RedditGallery-RedditGalleryUITests/Pods-RedditGallery-RedditGalleryUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RedditGallery-RedditGalleryUITests/Pods-RedditGallery-RedditGalleryUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D0B4B59BF351716CB537EC44 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -446,6 +483,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F68BD5A5C9961B04A5E8390A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RedditGalleryTests/Pods-RedditGalleryTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RedditGalleryTests/Pods-RedditGalleryTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RedditGalleryTests/Pods-RedditGalleryTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -642,6 +696,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 79C2EC68A83C1FE1E351CFA2 /* Pods-RedditGallery.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -664,6 +719,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DC003FC5AF1A8BB0569558A0 /* Pods-RedditGallery.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -686,7 +742,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E718EB01636B625000BBA55D /* Pods-RedditGalleryTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5SAN32BM2P;
@@ -709,7 +765,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9FF531BB9EACA00D2972CFFE /* Pods-RedditGalleryTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5SAN32BM2P;
@@ -732,7 +788,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1F67F3322E5925BA0809DAED /* Pods-RedditGallery-RedditGalleryUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5SAN32BM2P;
 				INFOPLIST_FILE = RedditGalleryUITests/Info.plist;
@@ -753,7 +809,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 43F18D26048C8D90A5C4D122 /* Pods-RedditGallery-RedditGalleryUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5SAN32BM2P;
 				INFOPLIST_FILE = RedditGalleryUITests/Info.plist;
