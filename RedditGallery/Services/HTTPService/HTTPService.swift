@@ -41,11 +41,6 @@ class HTTPService: HTTPServiceProtocol {
                     return
                 }
                 
-                guard let mime = response.mimeType, mime == "application/json" else {
-                    observer(.error(HTTPServiceErrorBuilder.error(forCode: HTTPServiceErrorCode.HTTPInvalidJsonFormat)))
-                    return
-                }
-                
                 let httpResponse = HTTPServiceResponse(data: data!)
                 
                 observer(.success(httpResponse))
