@@ -14,6 +14,7 @@ enum HTTPServiceErrorCode: Int {
     case HTTPRequestError = 001
     case HTTPResponseError = 002
     case HTTPInvalidJsonFormat = 003
+    case EndpointNotValid = 004
 }
 
 final class HTTPServiceErrorBuilder {
@@ -41,6 +42,7 @@ final class HTTPServiceErrorBuilder {
             case .HTTPRequestError: return " HTTPRequestError "
             case .HTTPResponseError: return " HTTPResponseError "
             case .HTTPInvalidJsonFormat: return "Invalid Json Format"
+            case .EndpointNotValid: return "The endpoint provided is not valid"
         }
     }
 }

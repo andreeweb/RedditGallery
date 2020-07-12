@@ -21,8 +21,11 @@ class HTTPService: HTTPServiceProtocol {
                 observer(.error(HTTPServiceErrorBuilder.error(forCode: HTTPServiceErrorCode.ReferenceError)))
                 return Disposables.create()
             }
-            
-            let url = URL(string: endpoint)!
+                        
+            guard let url = URL(string: endpoint) else {
+                observer(.error(HTTPServiceErrorBuilder.error(forCode: HTTPServiceErrorCode.EndpointNotValid)))
+                return Disposables.create()
+            }
             
             strongSelf.session.dataTask(with: url, completionHandler: { data, response, error in
                 
