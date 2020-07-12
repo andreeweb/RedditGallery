@@ -17,7 +17,7 @@ enum RedditServiceErrorCode: Int {
 final class RedditServiceErrorBuilder {
     
     // Domain identifier
-    static var domain: String = "com.testapp.RedditGallery.HTTPServiceErrorBuilder"
+    static var domain: String = "com.testapp.RedditGallery.RedditServiceErrorBuilder"
     
     // NSError helper function
     static func error(forCode code: RedditServiceErrorCode) -> NSError {

@@ -8,8 +8,6 @@
 
 import Foundation
 
-import Foundation
-
 enum RedditCacheConfig {
     
     static let cacheFolder = "redditCache"

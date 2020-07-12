@@ -18,7 +18,7 @@ enum FileServiceErrorCode: Int {
 final class FileServiceErrorBuilder {
     
     // Domain identifier
-    static var domain: String = "com.testapp.RedditGallery.HTTPServiceErrorBuilder"
+    static var domain: String = "com.testapp.RedditGallery.FileServiceErrorBuilder"
     
     // NSError helper function
     static func error(forCode code: FileServiceErrorCode) -> NSError {

@@ -19,7 +19,7 @@ enum RedditCacheServiceErrorCode: Int {
 final class RedditCacheServiceErrorBuilder {
     
     // Domain identifier
-    static var domain: String = "com.testapp.RedditGallery.HTTPServiceErrorBuilder"
+    static var domain: String = "com.testapp.RedditGallery.RedditCacheServiceErrorBuilder"
     
     // NSError helper function
     static func error(forCode code: RedditCacheServiceErrorCode) -> NSError {
