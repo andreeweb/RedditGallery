@@ -10,4 +10,5 @@ import Foundation
 
 protocol GalleryViewControllerProtocol {
     
+    var viewModel: GalleryViewModelProtocol! { get set }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol CoordinatorProtocol {
+protocol CoordinatorProtocol: class {
     
-    func initCoordinator() -> UIViewController
+    static func initCoordinator() -> UIViewController
 }

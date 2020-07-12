@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Post: Decodable {
+struct Post {
     
     let title: String
     let thumbnail: String

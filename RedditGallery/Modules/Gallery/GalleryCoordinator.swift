@@ -14,28 +14,35 @@ class GalleryCoordinator: UITabBarController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        initGalleryView()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
-extension GalleryCoordinator: GalleryCoordinatorProtocol {
+extension GalleryCoordinator: GalleryCoordinatorProtocol  {
     
-    func initCoordinator() -> UIViewController {
+    static func initCoordinator() -> UIViewController {
         
         let controller = UIStoryboard(name: "Gallery", bundle: nil)
             .instantiateTabBarController(withIdentifier: "GalleryTabBarController") as! GalleryCoordinator
         
         return controller
+    }
+    
+    private func initGalleryView() {
+        
+        // dependecies
+        let httpService = HTTPService()
+        let redditService = RedditService(httpService: httpService)
+        let fileService = FileService()
+        let redditCacheService = RedditCacheService(fileService: fileService)
+        let redditPostRepository = RedditPostRepository(redditService: redditService, cacheService: redditCacheService)
+        
+        // view model
+        let galleryViewModel = GalleryViewModel(coordinator: self, redditPostRepository: redditPostRepository)
+        
+        // view model injection
+        let galleryNavController = self.viewControllers![0] as! UINavigationController
+        let galleryViewController = galleryNavController.viewControllers[0] as! GalleryViewController
+        galleryViewController.viewModel = galleryViewModel
     }
 }
