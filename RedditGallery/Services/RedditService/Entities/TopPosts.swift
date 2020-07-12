@@ -8,9 +8,8 @@
 
 import Foundation
 
-struct TopPosts: Decodable {
+struct TopPosts: Codable {
     
     let kind: String
-    let data: JsonData
-    
+    let data: JData
 }

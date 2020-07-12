@@ -12,6 +12,7 @@ enum RedditServiceErrorCode: Int {
     
     case ReferenceError = 000
     case JsonFormatError = 001
+    case RequestFailed = 002
 }
 
 final class RedditServiceErrorBuilder {
@@ -31,15 +32,19 @@ final class RedditServiceErrorBuilder {
     // NSString, a complete sentence (or more) describing ideally both what failed and why it failed.
     static func localizedDescription(forCode code: RedditServiceErrorCode) -> String {
         switch code {
-            case .ReferenceError:
-                return """
-                The object that is the source of this Observable was destroyed.
-                It's programmer's error, please check documentation of error for more details
-                """
-            case .JsonFormatError:
-                return """
-                JSON format error
-                """
+        case .ReferenceError:
+            return """
+            The object that is the source of this Observable was destroyed.
+            It's programmer's error, please check documentation of error for more details
+            """
+        case .JsonFormatError:
+            return """
+            JSON format error
+            """
+        case .RequestFailed:
+            return """
+            HTTP Request failed
+            """
         }
     }
 }

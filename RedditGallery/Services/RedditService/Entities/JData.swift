@@ -1,5 +1,5 @@
 //
-//  Children.swift
+//  RedditData.swift
 //  RedditGallery
 //
 //  Created by Andrea Cerra on 7/11/20.
@@ -8,8 +8,9 @@
 
 import Foundation
 
-struct Children: Codable {
+struct JData: Codable {
     
-    let kind: String
-    let data: PostData
+    let modhash: String
+    let dist: Int
+    let children: [Children]
 }

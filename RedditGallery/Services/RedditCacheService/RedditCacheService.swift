@@ -45,7 +45,7 @@ class RedditCacheService: RedditCacheServiceProtocol {
         }
     }
     
-    func storeRedditPostsInCache(keyword: String, data: Data) -> Completable {
+    func storeRedditPostsInCache(keyword: String, topPosts: TopPosts) -> Completable {
         
         return Completable.create { [weak self] observer -> Disposable in
         
@@ -58,8 +58,10 @@ class RedditCacheService: RedditCacheServiceProtocol {
         
                 let path = try strongSelf.fileService.getDirectoryPath(subPath: RedditCacheConfig.cacheFolder)
                 let url = path.appendingPathComponent("\(keyword).json")
-                
-                try data.write(to: url)
+                                
+                let jsonData = try JSONEncoder().encode(topPosts)
+
+                try jsonData.write(to: url)
                 observer(.completed)
             
             } catch {

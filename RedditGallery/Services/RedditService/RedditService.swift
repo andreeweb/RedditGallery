@@ -44,15 +44,14 @@ class RedditService: RedditServiceProtocol {
                      
                         httpRequestDisposable?.dispose()
                         
-                    } catch let error {
+                    } catch {
                         
-                        print(error.localizedDescription)
                         observer(.error(RedditServiceErrorBuilder.error(forCode: RedditServiceErrorCode.JsonFormatError)))
                     }
                     
                 }, onError: { (error) in
                     
-                    observer(.error(error))
+                    observer(.error(RedditServiceErrorBuilder.error(forCode: RedditServiceErrorCode.RequestFailed)))
                 })
                     
             return Disposables.create()

@@ -29,35 +29,10 @@ class RedditCacheServiceTests: XCTestCase {
         let fileService = FileService()
         let redditCache = RedditCacheService(fileService: fileService)
             
-        let jsonData: Data? = """
-            {
-              "kind": "Listing",
-              "data": {
-                "modhash": "",
-                "dist": 2,
-                "children": [
-                  {
-                    "kind": "t3",
-                    "data": {
-                      "title": "What OneWeb's $1 billion rescue from bankruptcy means for SpaceX's Starlink",
-                      "thumbnail": "https://a.thumbs.redditmedia.com/x1svVj-hKxKxpcMtd21Lopp21S-_rhzjqUngqFjlo_0.jpg",
-                    }
-                  },
-                  {
-                    "kind": "t3",
-                    "data": {
-                      "title": "Brilliant behind the scenes look at @SpaceX and @NASA Crew Dragon launch from @Space_Station point-of-view",
-                      "thumbnail": "https://b.thumbs.redditmedia.com/HicreXfG0HE4kCNwh0Bvsknegza0BUb20FHK61422ks.jpg",
-                    }
-                  }
-                ],
-                "after": null,
-                "before": null
-              }
-            }
-            """.data(using: .utf8)
+        let jData = JData(modhash: "modhash-test", dist: 2, children: [])
+        let topPosts = TopPosts(kind: "kind-test", data: jData)
         
-        _ = try! redditCache.storeRedditPostsInCache(keyword: "test", data: jsonData!)
+        _ = try! redditCache.storeRedditPostsInCache(keyword: "test", topPosts: topPosts)
             .toBlocking()
             .last()
         
@@ -65,8 +40,48 @@ class RedditCacheServiceTests: XCTestCase {
             .toBlocking()
             .last()
         
-        XCTAssertEqual(postsFromCache?.kind, "Listing")
-        XCTAssertEqual(postsFromCache?.data.children.count, 2)
+        XCTAssertEqual(postsFromCache?.kind, "kind-test")
+        XCTAssertEqual(postsFromCache?.data.modhash, "modhash-test")
+        XCTAssertEqual(postsFromCache?.data.children.count, 0)
+        
+        _ = try! redditCache.invalidateLocalCache(keyword: "test")
+            .toBlocking()
+            .last()
+        
+        XCTAssertThrowsError(try redditCache
+            .retrieveRedditTopPostsFromCache(keyword: "test")
+            .toBlocking()
+            .last()!) { error in
+                XCTAssertEqual((error as NSError).code, 000)
+        }
+    }
+    
+    func testUpdateCache(){
+        
+        let fileService = FileService()
+        let redditCache = RedditCacheService(fileService: fileService)
+        
+        let jData = JData(modhash: "modhash-test", dist: 2, children: [])
+        let topPosts = TopPosts(kind: "kind-test", data: jData)
+        
+        _ = try! redditCache.storeRedditPostsInCache(keyword: "test", topPosts: topPosts)
+            .toBlocking()
+            .last()
+
+        let jData2 = JData(modhash: "modhash-test2", dist: 5, children: [])
+        let topPosts2 = TopPosts(kind: "kind-test2", data: jData2)
+        
+        _ = try! redditCache.storeRedditPostsInCache(keyword: "test", topPosts: topPosts2)
+            .toBlocking()
+            .last()
+        
+        let postsFromCache = try! redditCache.retrieveRedditTopPostsFromCache(keyword: "test")
+            .toBlocking()
+            .last()
+        
+        XCTAssertEqual(postsFromCache?.kind, "kind-test2")
+        XCTAssertEqual(postsFromCache?.data.modhash, "modhash-test2")
+        XCTAssertEqual(postsFromCache?.data.children.count, 0)
         
         _ = try! redditCache.invalidateLocalCache(keyword: "test")
             .toBlocking()

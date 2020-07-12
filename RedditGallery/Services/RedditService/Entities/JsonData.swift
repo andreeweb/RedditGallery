@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct JsonData: Decodable {
+struct JData: Decodable {
     
     let modhash: String
     let dist: Int

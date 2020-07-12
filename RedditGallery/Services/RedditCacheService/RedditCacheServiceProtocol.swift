@@ -23,7 +23,7 @@ protocol RedditCacheServiceProtocol {
     ///
     /// - Parameter keyword: reddit keyword
     /// - Parameter data: data to be cached
-    func storeRedditPostsInCache(keyword: String, data: Data) -> Completable
+    func storeRedditPostsInCache(keyword: String, topPosts: TopPosts) -> Completable
     
     /// This function invalidate the local cache
     /// for the  keyword passed
