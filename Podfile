@@ -8,12 +8,12 @@ target 'RedditGallery' do
   # Pods for RedditGallery
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
-
+  
   target 'RedditGalleryTests' do
     inherit! :search_paths
     # Pods for testing
-	pod 'RxBlocking', '~> 5'
-    pod 'RxTest', '~> 5'
+    pod 'RxBlocking', '~> 5'
+	pod 'RxTest', '~> 5'
   end
 
   target 'RedditGalleryUITests' do
