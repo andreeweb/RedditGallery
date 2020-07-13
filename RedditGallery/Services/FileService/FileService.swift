@@ -41,14 +41,14 @@ class FileService: FileServiceProtocol {
         if fileManager.fileExists(atPath: path.path, isDirectory:&isDir) {
             
             if isDir.boolValue {
-                
-                let filesArray:[String] = (fileManager.subpaths(atPath: path.absoluteString) ?? []) as [String]
-                
-                for fileName in filesArray{
+                                
+                let filesArray = try fileManager.contentsOfDirectory(atPath: path.path)
+                                
+                for fileName in filesArray {
                     
-                    let filePath = "\(path)/\(fileName)"
+                    let filePath = "\(path.path)/\(fileName)"
                                         
-                    let attr = try fileManager.attributesOfItem(atPath: filePath)
+                    let attr = try! fileManager.attributesOfItem(atPath: filePath)
                     totalSize += attr[FileAttributeKey.size] as! Double
                 }
             
@@ -63,5 +63,27 @@ class FileService: FileServiceProtocol {
         }
         
         return totalSize
+    }
+    
+    func deleteDirectory(path: URL) throws {
+        
+        let fileManager = FileManager.default
+        var isDir : ObjCBool = false
+        
+        if fileManager.fileExists(atPath: path.path, isDirectory:&isDir) {
+            
+            if isDir.boolValue {
+                
+                try fileManager.removeItem(at: path)
+                
+            } else {
+                
+                throw FileServiceErrorBuilder.error(forCode: FileServiceErrorCode.PathIsNotADirectory)
+            }
+            
+        } else {
+            
+            throw FileServiceErrorBuilder.error(forCode: FileServiceErrorCode.PathIsNotADirectory)
+        }
     }
 }

@@ -24,4 +24,9 @@ protocol FileServiceProtocol {
     /// - Parameter path: directory path
     /// - Returns: Directory size
     func getDirectorySize(path: URL) throws -> Double
+
+    /// Remove the directory at the path provided
+    ///
+    /// - Parameter path: directory path
+    func deleteDirectory(path: URL) throws
 }

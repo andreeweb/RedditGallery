@@ -15,6 +15,7 @@ class GalleryCoordinator: UITabBarController {
 
         // Do any additional setup after loading the view.
         initGalleryView()
+        initSettingsView()
     }
 }
 
@@ -52,5 +53,20 @@ extension GalleryCoordinator: GalleryCoordinatorProtocol  {
         let galleryNavController = self.viewControllers![0] as! UINavigationController
         let galleryViewController = galleryNavController.viewControllers[0] as! GalleryViewController
         galleryViewController.viewModel = galleryViewModel
+    }
+    
+    private func initSettingsView() {
+        
+        // dependecies
+        let fileService = FileService()
+        
+        // view model
+        let settingsViewModel = GallerySettingsViewModel(coordinator: self,
+                                                         fileService: fileService)
+                
+        // view model injection
+        let settingsNavController = self.viewControllers![1] as! UINavigationController
+        let settingsViewController = settingsNavController.viewControllers[0] as! GallerySettingsViewController
+        settingsViewController.viewModel = settingsViewModel
     }
 }

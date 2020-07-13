@@ -13,6 +13,7 @@ import RxCocoa
 final class GalleryViewModel: GalleryViewModelProtocol {
     
     private unowned let coordinator: GalleryCoordinatorProtocol
+    
     private let redditPostRepository: RedditPostRepositoryProtocol
     private let imageRepository: ImageRepositoryProtocol
     private let disposeBag: DisposeBag
