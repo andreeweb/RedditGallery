@@ -50,10 +50,9 @@ final class GalleryViewModel: GalleryViewModelProtocol {
                 
                 self?.tableDataRelay.accept(tempArray)
                 
-            }, onError: { error in
+            }, onError: { [weak self] error in
             
-                // TODO set no posts available flag
-                // print(error)
+                self?.tableDataRelay.accept([])
             
             }).disposed(by: disposeBag)
     }
@@ -67,7 +66,7 @@ final class GalleryViewModel: GalleryViewModelProtocol {
                 
         }) { (error) in
             
-            completion(UIImage(imageLiteralResourceName: "first"))
+            completion(UIImage(imageLiteralResourceName: "no-image"))
             
         }.disposed(by: disposeBag)
     }
