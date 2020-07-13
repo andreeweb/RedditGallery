@@ -32,11 +32,7 @@ class ImageCacheService: ImageCacheServiceProtocol {
                 
                 let path = try strongSelf.fileService.getDirectoryPath(subPath: ImageCacheConfig.cacheFolder)
                 let url = path.appendingPathComponent("\(localURL)")
-                
-                print("\n RETRIEVE")
-                print(" Original url \(imageURL)")
-                print(" Get url \(url)")
-                
+                                
                 let imageData = try Data(contentsOf: url)
                 
                 guard let uiImage: UIImage = UIImage(data: imageData) else {
@@ -69,10 +65,6 @@ class ImageCacheService: ImageCacheServiceProtocol {
                 
                 let path = try strongSelf.fileService.getDirectoryPath(subPath: ImageCacheConfig.cacheFolder)
                 let url = path.appendingPathComponent("\(localURL)")
-                
-                print("\n STORE")
-                print(" Original url \(imageURL)")
-                print(" Store url \(url)")
                 
                 guard let imageData = image.pngData() else {
                     throw ImageCacheServiceErrorBuilder.error(forCode: ImageCacheServiceErrorCode.CacheMissError)

@@ -35,10 +35,18 @@ extension GalleryCoordinator: GalleryCoordinatorProtocol  {
         let redditService = RedditService(httpService: httpService)
         let fileService = FileService()
         let redditCacheService = RedditCacheService(fileService: fileService)
-        let redditPostRepository = RedditPostRepository(redditService: redditService, cacheService: redditCacheService)
+        let redditPostRepository = RedditPostRepository(redditService: redditService,
+                                                        cacheService: redditCacheService)
+        
+        let imageService = ImageService(httpService: httpService)
+        let imageCacheService = ImageCacheService(fileService: fileService)
+        let imageRepository = ImageRepository(imageService: imageService,
+                                              cacheService: imageCacheService)
         
         // view model
-        let galleryViewModel = GalleryViewModel(coordinator: self, redditPostRepository: redditPostRepository)
+        let galleryViewModel = GalleryViewModel(coordinator: self,
+                                                redditPostRepository: redditPostRepository,
+                                                imageRepository: imageRepository)
         
         // view model injection
         let galleryNavController = self.viewControllers![0] as! UINavigationController

@@ -26,7 +26,7 @@ final class GalleryViewController: UIViewController, GalleryViewControllerProtoc
         bindTableDataSource(with: viewModel)
         
         // TODO add search bar and move inside the search action
-        viewModel.searchPostByKeyword(keyword: "twitter")
+        viewModel.searchPostByKeyword(keyword: "intel")
     }
     
     private func bindTableDataSource(with viewModel: GalleryViewModelProtocol) {

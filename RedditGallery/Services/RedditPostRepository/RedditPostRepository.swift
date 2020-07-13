@@ -38,12 +38,11 @@ class RedditPostRepository: RedditPostRepositoryProtocol {
                     nestedRequestDisposable = strongSelf.cacheService.storeRedditPostsInCache(keyword: keyword, topPosts: posts)
                         .subscribe(onCompleted: {
                             
-                            print("getRedditPostPerKeyword :: Cache updated for keyword \(keyword)")
                             nestedRequestDisposable?.dispose()
                             
                         }, onError: { (error) in
                             
-                            print("getRedditPostPerKeyword :: \(error)")
+                            print("Repository getRedditPostPerKeyword :: \(error)")
                         })
                     
                     observer(.success(posts))
@@ -53,7 +52,7 @@ class RedditPostRepository: RedditPostRepositoryProtocol {
                                                 
                 nestedRequestDisposable = strongSelf.cacheService.retrieveRedditTopPostsFromCache(keyword: keyword)
                     .subscribe(onSuccess: { (posts) in
-                                                
+                                                                        
                         observer(.success(posts))
                         nestedRequestDisposable?.dispose()
                         

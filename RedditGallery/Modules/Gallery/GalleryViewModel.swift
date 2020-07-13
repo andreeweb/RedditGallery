@@ -13,9 +13,9 @@ import RxCocoa
 final class GalleryViewModel: GalleryViewModelProtocol {
     
     private unowned let coordinator: GalleryCoordinatorProtocol
-    
-    private let disposeBag: DisposeBag
     private let redditPostRepository: RedditPostRepositoryProtocol
+    private let imageRepository: ImageRepositoryProtocol
+    private let disposeBag: DisposeBag
     private var tableDataRelay: BehaviorRelay<[Post]>
     
     var tableData: Observable<[Post]> {
@@ -23,10 +23,12 @@ final class GalleryViewModel: GalleryViewModelProtocol {
     }
     
     required init(coordinator: GalleryCoordinatorProtocol,
-                  redditPostRepository: RedditPostRepositoryProtocol) {
+                  redditPostRepository: RedditPostRepositoryProtocol,
+                  imageRepository: ImageRepositoryProtocol) {
         
         self.coordinator = coordinator
         self.redditPostRepository = redditPostRepository
+        self.imageRepository = imageRepository
         self.disposeBag = DisposeBag()
         self.tableDataRelay = BehaviorRelay<[Post]>(value: [])
     }
@@ -50,19 +52,15 @@ final class GalleryViewModel: GalleryViewModelProtocol {
                 
             }, onError: { error in
             
-                print(error)
+                // TODO set no posts available flag
+                // print(error)
             
             }).disposed(by: disposeBag)
     }
     
     func getImageFromURL(imageURL: String, completion: @escaping (UIImage) -> Void) {
         
-        // TODO move to the coordinator and inject!
-        let httpService = HTTPService()
-        let imageService = ImageService(httpService: httpService)
-        
-        // TODO image repository
-        imageService.getImage(imageUrl: imageURL)
+        imageRepository.getImage(imageURL: imageURL)
             .subscribe(onSuccess: { (image) in
             
                 completion(image)
