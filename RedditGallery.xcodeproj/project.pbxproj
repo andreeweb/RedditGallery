@@ -33,6 +33,8 @@
 		1D27B47724BA1573000AEC9B /* HTTPServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B47624BA1573000AEC9B /* HTTPServiceResponse.swift */; };
 		1D27B47C24BA1863000AEC9B /* HTTPServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B47024B9FEC7000AEC9B /* HTTPServiceProtocol.swift */; };
 		1D41723C24BCF54500F11C45 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D41723E24BCF54500F11C45 /* Localizable.strings */; };
+		1D41724024BCF86C00F11C45 /* GalleryViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41723F24BCF86C00F11C45 /* GalleryViewModelTest.swift */; };
+		1D41724224BCFA1300F11C45 /* GalleryCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41724124BCFA1300F11C45 /* GalleryCoordinatorMock.swift */; };
 		1D8997D224B8E54500003315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8997D124B8E54500003315 /* AppDelegate.swift */; };
 		1D8997D424B8E54500003315 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8997D324B8E54500003315 /* SceneDelegate.swift */; };
 		1D8997DB24B8E54500003315 /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8997D924B8E54500003315 /* Gallery.storyboard */; };
@@ -120,6 +122,8 @@
 		1D27B47624BA1573000AEC9B /* HTTPServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPServiceResponse.swift; sourceTree = "<group>"; };
 		1D27B47924BA170D000AEC9B /* HTTPServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPServiceMock.swift; sourceTree = "<group>"; };
 		1D41723D24BCF54500F11C45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1D41723F24BCF86C00F11C45 /* GalleryViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModelTest.swift; sourceTree = "<group>"; };
+		1D41724124BCFA1300F11C45 /* GalleryCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCoordinatorMock.swift; sourceTree = "<group>"; };
 		1D8997CE24B8E54500003315 /* RedditGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedditGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8997D124B8E54500003315 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D8997D324B8E54500003315 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -289,6 +293,7 @@
 			children = (
 				1D27B47924BA170D000AEC9B /* HTTPServiceMock.swift */,
 				1DE9453124BB6BEE002146E0 /* RedditServiceMock.swift */,
+				1D41724124BCFA1300F11C45 /* GalleryCoordinatorMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -346,6 +351,7 @@
 				1DE9451824BB45CA002146E0 /* ImageServiceTests.swift */,
 				1DE9452424BB4CEF002146E0 /* ImageCacheServiceTests.swift */,
 				1DE9452D24BB5C4B002146E0 /* RedditPostRepositoryTests.swift */,
+				1D41723F24BCF86C00F11C45 /* GalleryViewModelTest.swift */,
 			);
 			path = RedditGalleryTests;
 			sourceTree = "<group>";
@@ -730,6 +736,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DE9450524BA6BC5002146E0 /* RedditCacheConfig.swift in Sources */,
+				1D41724224BCFA1300F11C45 /* GalleryCoordinatorMock.swift in Sources */,
 				1DE9452124BB4866002146E0 /* ImageCacheConfig.swift in Sources */,
 				1D27B43524B9D2C3000AEC9B /* GalleryViewModelProtocol.swift in Sources */,
 				1DE9450124BA5F89002146E0 /* RedditCacheServiceErrorBuilder.swift in Sources */,
@@ -792,6 +799,7 @@
 				1DE9452524BB4CEF002146E0 /* ImageCacheServiceTests.swift in Sources */,
 				1D27B47524BA0911000AEC9B /* HTTPServiceTests.swift in Sources */,
 				1DE9450E24BA7933002146E0 /* FileServiceTests.swift in Sources */,
+				1D41724024BCF86C00F11C45 /* GalleryViewModelTest.swift in Sources */,
 				1D27B47C24BA1863000AEC9B /* HTTPServiceProtocol.swift in Sources */,
 				1DE9452E24BB5C4B002146E0 /* RedditPostRepositoryTests.swift in Sources */,
 				1DE9450324BA6366002146E0 /* RedditCacheServiceTests.swift in Sources */,

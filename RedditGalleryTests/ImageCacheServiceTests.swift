@@ -24,7 +24,7 @@ class ImageCacheServiceTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testImageCaching() throws {
     
         let imageURL = "https://a.thumbs.redditmedia.com/x1svVj-hKxKxpcMtd21Lopp21S-_rhzjqUngqFjlo_0.jpg"
         

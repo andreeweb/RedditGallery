@@ -51,7 +51,7 @@ class RedditPostRepositoryTests: XCTestCase {
         let postRepository = RedditPostRepository(redditService: redditService, cacheService: redditCache)
         
         XCTAssertThrowsError(try postRepository
-            .getRedditPostPerKeyword(keyword: "spacex")
+            .getRedditPostPerKeyword(keyword: "no-valid-key")
             .toBlocking()
             .last()!) { error in
                 XCTAssertEqual((error as NSError).code, 001)
