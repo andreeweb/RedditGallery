@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Gallery-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="GalleryViewController" customModule="RedditGallery" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,20 +65,31 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="iuw-eN-he6"/>
                                 </connections>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type somenthing in the search bar :)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVL-FT-Zln">
+                                <rect key="frame" x="35.5" y="437.5" width="343" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dpj-cc-90S" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="5Sd-uU-iLo"/>
+                            <constraint firstItem="kVL-FT-Zln" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="35.5" id="69d-B8-NqT"/>
                             <constraint firstItem="dpj-cc-90S" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="Jsy-PH-05z"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="kVL-FT-Zln" secondAttribute="trailing" constant="35.5" id="VaF-d1-g8X"/>
                             <constraint firstItem="dpj-cc-90S" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="hXO-Ig-t8z"/>
+                            <constraint firstItem="kVL-FT-Zln" firstAttribute="centerX" secondItem="dpj-cc-90S" secondAttribute="centerX" id="jcg-AF-2hG"/>
                             <constraint firstItem="dpj-cc-90S" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="qiI-FU-9tv"/>
                             <constraint firstItem="dpj-cc-90S" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="uLJ-SS-7Nr"/>
+                            <constraint firstItem="kVL-FT-Zln" firstAttribute="centerY" secondItem="dpj-cc-90S" secondAttribute="centerY" id="w3f-8e-dJf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
-                    <navigationItem key="navigationItem" id="bSu-14-YaZ"/>
+                    <tabBarItem key="tabBarItem" title="Gallery" image="photo" catalog="system" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" title="Gallery" id="bSu-14-YaZ"/>
                     <connections>
+                        <outlet property="centerLabel" destination="kVL-FT-Zln" id="Xyq-yC-yxQ"/>
                         <outlet property="collectionView" destination="dpj-cc-90S" id="rbe-Tm-ptz"/>
                     </connections>
                 </viewController>
@@ -86,7 +97,7 @@
             </objects>
             <point key="canvasLocation" x="1728.985507246377" y="-314.0625"/>
         </scene>
-        <!--Second-->
+        <!--Settings-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="GallerySettingsViewController" customModule="RedditGallery" customModuleProvider="target" sceneMemberID="viewController">
@@ -108,7 +119,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="rosette" catalog="system" id="cPa-gy-q4n"/>
                     <navigationItem key="navigationItem" id="2Vq-bN-QGh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -137,11 +148,14 @@
         <scene sceneID="yFV-Bd-U5D">
             <objects>
                 <navigationController id="x3V-ef-ZVs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Gallery" id="RzE-fq-9BG"/>
+                    <tabBarItem key="tabBarItem" title="Gallery" selectedImage="photo" catalog="system" id="RzE-fq-9BG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Nw-ss-zno">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Usj-ws-CPJ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="GYh-Vl-EIb"/>
                     </connections>
@@ -154,7 +168,7 @@
         <scene sceneID="tCm-GV-kE4">
             <objects>
                 <navigationController id="PxZ-8c-Aeb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="JKn-m9-saB"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="rosette" catalog="system" selectedImage="rosette" id="JKn-m9-saB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iRy-l9-KA3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -169,7 +183,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="rosette" catalog="system" width="100" height="128"/>
     </resources>
 </document>
