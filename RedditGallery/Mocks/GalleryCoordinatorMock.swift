@@ -10,6 +10,10 @@ import UIKit
 
 class GalleryCoordinatorMock: GalleryCoordinatorProtocol {
     
+    func navigateToDetailView(post: Post) {
+        fatalError()
+    }
+    
     static func initCoordinator() -> UIViewController {
             
         return UIViewController()

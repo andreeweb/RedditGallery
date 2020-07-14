@@ -71,4 +71,11 @@ final class GalleryViewModel: GalleryViewModelProtocol {
             
         }.disposed(by: disposeBag)
     }
+    
+    func cellSelected(indexPath: IndexPath) {
+        
+        let selectedObj = tableDataRelay.value[indexPath.row]
+        
+        coordinator.navigateToDetailView(post: selectedObj)
+    }
 }

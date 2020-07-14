@@ -110,6 +110,15 @@ extension GalleryViewController: UICollectionViewDataSource {
     }
 }
 
+extension GalleryViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        print("Selected Cell: \(indexPath.row)")
+        viewModel.cellSelected(indexPath: indexPath)
+    }
+}
+
 extension GalleryViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

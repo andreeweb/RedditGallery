@@ -29,14 +29,14 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PostCell" id="y89-Rf-CIA" customClass="PostCollectionViewCell" customModule="RedditGallery" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="F0h-os-y3n" customClass="PostCollectionViewCell" customModule="RedditGallery" customModuleProvider="target">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="F0h-os-y3n" customClass="PostCollectionViewCell" customModule="RedditGallery" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e3q-ED-Edo">
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                 </imageView>
-                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="6Ob-UR-hQh">
+                                                <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="6Ob-UR-hQh">
                                                     <rect key="frame" x="41" y="39" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="1cq-Ke-bhs"/>
@@ -62,7 +62,7 @@
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="9pv-A4-QxB" id="Y0D-xs-ngQ"/>
-                                    <outlet property="delegate" destination="9pv-A4-QxB" id="iuw-eN-he6"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="lge-At-WDO"/>
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type somenthing in the search bar :)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVL-FT-Zln">
@@ -96,6 +96,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1728.985507246377" y="-314.0625"/>
+        </scene>
+        <!--Gallery Detail View Controller-->
+        <scene sceneID="Zha-Yk-K2y">
+            <objects>
+                <viewController storyboardIdentifier="detailViewController" hidesBottomBarWhenPushed="YES" id="CO1-eM-GFm" customClass="GalleryDetailViewController" customModule="RedditGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v6c-eJ-tyA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e3X-Jb-L8p">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="e3X-Jb-L8p" firstAttribute="bottom" secondItem="G28-a7-AqZ" secondAttribute="bottom" id="K1u-OY-QkG"/>
+                            <constraint firstItem="e3X-Jb-L8p" firstAttribute="centerX" secondItem="G28-a7-AqZ" secondAttribute="centerX" id="P1u-xc-qbn"/>
+                            <constraint firstItem="e3X-Jb-L8p" firstAttribute="centerY" secondItem="G28-a7-AqZ" secondAttribute="centerY" id="PL6-He-fmP"/>
+                            <constraint firstItem="e3X-Jb-L8p" firstAttribute="trailing" secondItem="G28-a7-AqZ" secondAttribute="trailing" id="Wob-bq-ogd"/>
+                            <constraint firstItem="e3X-Jb-L8p" firstAttribute="top" secondItem="G28-a7-AqZ" secondAttribute="top" id="bcc-K0-Fdz"/>
+                            <constraint firstItem="e3X-Jb-L8p" firstAttribute="leading" secondItem="G28-a7-AqZ" secondAttribute="leading" id="lOC-KM-hHh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="G28-a7-AqZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="e3X-Jb-L8p" id="K1R-8e-Pzb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ICq-3k-aH1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2960.8695652173915" y="-314.0625"/>
         </scene>
         <!--Gallery Coordinator-->
         <scene sceneID="yl2-sM-qoP">

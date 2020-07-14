@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1C31106958119DF75C244E50 /* Pods_RedditGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD02A1594498E9EF1537264 /* Pods_RedditGallery.framework */; };
+		1D272E3724BE0F8A004BC28C /* GalleryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D272E3624BE0F8A004BC28C /* GalleryDetailViewController.swift */; };
+		1D272E3924BE0F9D004BC28C /* GalleryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D272E3824BE0F9D004BC28C /* GalleryDetailViewModel.swift */; };
+		1D272E3B24BE0FAA004BC28C /* GalleryDetailViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D272E3A24BE0FAA004BC28C /* GalleryDetailViewModelProtocol.swift */; };
+		1D272E3D24BE0FB6004BC28C /* GalleryDetailViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D272E3C24BE0FB6004BC28C /* GalleryDetailViewControllerProtocol.swift */; };
 		1D27B42B24B9D08E000AEC9B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B42A24B9D08E000AEC9B /* Coordinator.swift */; };
 		1D27B43024B9D284000AEC9B /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B42F24B9D284000AEC9B /* GalleryViewController.swift */; };
 		1D27B43224B9D2A2000AEC9B /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B43124B9D2A2000AEC9B /* GalleryViewModel.swift */; };
@@ -97,6 +101,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D272E3624BE0F8A004BC28C /* GalleryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailViewController.swift; sourceTree = "<group>"; };
+		1D272E3824BE0F9D004BC28C /* GalleryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailViewModel.swift; sourceTree = "<group>"; };
+		1D272E3A24BE0FAA004BC28C /* GalleryDetailViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailViewModelProtocol.swift; sourceTree = "<group>"; };
+		1D272E3C24BE0FB6004BC28C /* GalleryDetailViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryDetailViewControllerProtocol.swift; sourceTree = "<group>"; };
 		1D27B42A24B9D08E000AEC9B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		1D27B42F24B9D284000AEC9B /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		1D27B43124B9D2A2000AEC9B /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
@@ -214,6 +222,8 @@
 				1D8997D924B8E54500003315 /* Gallery.storyboard */,
 				1D27B42F24B9D284000AEC9B /* GalleryViewController.swift */,
 				1D27B43124B9D2A2000AEC9B /* GalleryViewModel.swift */,
+				1D272E3624BE0F8A004BC28C /* GalleryDetailViewController.swift */,
+				1D272E3824BE0F9D004BC28C /* GalleryDetailViewModel.swift */,
 				1D27B44124B9D65B000AEC9B /* GallerySettingsViewController.swift */,
 				1D27B44524B9D691000AEC9B /* GallerySettingsViewModel.swift */,
 				1D27B43B24B9D521000AEC9B /* GalleryCoordinator.swift */,
@@ -225,11 +235,13 @@
 		1D27B43324B9D2A6000AEC9B /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				1D27B43424B9D2C3000AEC9B /* GalleryViewModelProtocol.swift */,
-				1D27B43624B9D2D5000AEC9B /* GalleryViewControllerProtocol.swift */,
 				1D27B43D24B9D52F000AEC9B /* GalleryCoordinatorProtocol.swift */,
+				1D27B43624B9D2D5000AEC9B /* GalleryViewControllerProtocol.swift */,
+				1D27B43424B9D2C3000AEC9B /* GalleryViewModelProtocol.swift */,
 				1D27B44324B9D668000AEC9B /* GallerySettingsViewControllerProtocol.swift */,
 				1D27B44724B9D6B1000AEC9B /* GallerySettingsViewModelProtocol.swift */,
+				1D272E3C24BE0FB6004BC28C /* GalleryDetailViewControllerProtocol.swift */,
+				1D272E3A24BE0FAA004BC28C /* GalleryDetailViewModelProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -735,6 +747,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D272E3B24BE0FAA004BC28C /* GalleryDetailViewModelProtocol.swift in Sources */,
 				1DE9450524BA6BC5002146E0 /* RedditCacheConfig.swift in Sources */,
 				1D41724224BCFA1300F11C45 /* GalleryCoordinatorMock.swift in Sources */,
 				1DE9452124BB4866002146E0 /* ImageCacheConfig.swift in Sources */,
@@ -742,6 +755,7 @@
 				1DE9450124BA5F89002146E0 /* RedditCacheServiceErrorBuilder.swift in Sources */,
 				1D27B43E24B9D52F000AEC9B /* GalleryCoordinatorProtocol.swift in Sources */,
 				1DE9453024BB6993002146E0 /* PostData.swift in Sources */,
+				1D272E3724BE0F8A004BC28C /* GalleryDetailViewController.swift in Sources */,
 				1D27B43224B9D2A2000AEC9B /* GalleryViewModel.swift in Sources */,
 				1DE944EF24BA29C7002146E0 /* Children.swift in Sources */,
 				1D27B44424B9D668000AEC9B /* GallerySettingsViewControllerProtocol.swift in Sources */,
@@ -754,8 +768,10 @@
 				1DE9452A24BB5001002146E0 /* ImageService.swift in Sources */,
 				1DE9453B24BCBAE3002146E0 /* ImageRepositoryProtocol.swift in Sources */,
 				1DE9451B24BB4716002146E0 /* ImageCacheService.swift in Sources */,
+				1D272E3924BE0F9D004BC28C /* GalleryDetailViewModel.swift in Sources */,
 				1DE9451F24BB472F002146E0 /* ImageCacheServiceErrorBuilder.swift in Sources */,
 				1D27B44824B9D6B1000AEC9B /* GallerySettingsViewModelProtocol.swift in Sources */,
+				1D272E3D24BE0FB6004BC28C /* GalleryDetailViewControllerProtocol.swift in Sources */,
 				1D27B44224B9D65B000AEC9B /* GallerySettingsViewController.swift in Sources */,
 				1DE9453924BB8A14002146E0 /* PostCollectionViewCell.swift in Sources */,
 				1DE9450A24BA6C8A002146E0 /* FileService.swift in Sources */,

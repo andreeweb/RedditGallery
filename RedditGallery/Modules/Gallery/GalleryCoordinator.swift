@@ -69,4 +69,29 @@ extension GalleryCoordinator: GalleryCoordinatorProtocol  {
         let settingsViewController = settingsNavController.viewControllers[0] as! GallerySettingsViewController
         settingsViewController.viewModel = settingsViewModel
     }
+    
+    func navigateToDetailView(post: Post) {
+        
+        // dependecies
+        let httpService = HTTPService()
+        let fileService = FileService()
+        let imageCacheService = ImageCacheService(fileService: fileService)
+        let imageService = ImageService(httpService: httpService)
+        let imageRepository = ImageRepository(imageService: imageService,
+                                              cacheService: imageCacheService)
+        
+        // view model
+        let viewModel = GalleryDetailViewModel(coordinator: self,
+                                               imageRepository: imageRepository,
+                                               post: post)
+        
+        // view model injection
+        let detailController = UIStoryboard(name: "Gallery", bundle: nil)
+            .instantiateViewController(identifier: "detailViewController") as! GalleryDetailViewController
+        
+        detailController.viewModel = viewModel
+        
+        let galleryNavController = self.viewControllers![0] as! UINavigationController
+        galleryNavController.pushViewController(detailController, animated: true)
+    }
 }

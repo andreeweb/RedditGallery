@@ -10,4 +10,8 @@ import Foundation
 
 protocol GalleryCoordinatorProtocol: CoordinatorProtocol {
     
+    /// Method used for navigate to the detail page
+    ///
+    /// - Parameter post: post to show in the detail
+    func navigateToDetailView(post: Post)
 }

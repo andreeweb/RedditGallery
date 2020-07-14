@@ -14,7 +14,7 @@ final class GallerySettingsViewModel: GallerySettingsViewModelProtocol{
     
     private unowned let coordinator: GalleryCoordinatorProtocol
     
-    private let fileService: FileService
+    private let fileService: FileServiceProtocol
     private let disposeBag: DisposeBag
     private var imageCacheRelay: BehaviorRelay<Double>
     private var dataCacheRelay: BehaviorRelay<Double>
@@ -28,7 +28,7 @@ final class GallerySettingsViewModel: GallerySettingsViewModelProtocol{
     }
     
     required init(coordinator: GalleryCoordinatorProtocol,
-                  fileService: FileService) {
+                  fileService: FileServiceProtocol) {
         
         self.coordinator = coordinator
         self.fileService = fileService

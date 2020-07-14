@@ -14,6 +14,9 @@ protocol GallerySettingsViewModelProtocol {
     var imageCache: Observable<Double> { get }
     var dataCache: Observable<Double> { get }
     
+    /// Method used for notify the ViewAppear
     func eventViewAppeared()
+    
+    /// Method for delete all the local cache data
     func deleteCacheRequested()
 }
