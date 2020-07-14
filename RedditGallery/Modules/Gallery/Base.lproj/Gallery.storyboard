@@ -128,10 +128,10 @@
             </objects>
             <point key="canvasLocation" x="2960.8695652173915" y="-314.0625"/>
         </scene>
-        <!--Gallery Coordinator-->
+        <!--Gallery Router-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController storyboardIdentifier="GalleryTabBarController" id="49e-Tb-3d3" customClass="GalleryCoordinator" customModule="RedditGallery" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="GalleryTabBarController" id="49e-Tb-3d3" customClass="GalleryRouter" customModule="RedditGallery" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>

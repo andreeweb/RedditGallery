@@ -1,5 +1,5 @@
 //
-//  GalleryCoordinator.swift
+//  GalleryRouter.swift
 //  RedditGallery
 //
 //  Created by Andrea Cerra on 7/11/20.
@@ -19,9 +19,9 @@ class GalleryRouter: UITabBarController {
     }
 }
 
-extension GalleryRouter: GalleryCoordinatorProtocol  {
+extension GalleryRouter: GalleryRouterProtocol  {
     
-    static func initCoordinator() -> UIViewController {
+    static func initRouter() -> UIViewController {
         
         let controller = UIStoryboard(name: "Gallery", bundle: nil)
             .instantiateTabBarController(withIdentifier: "GalleryTabBarController") as! GalleryRouter
@@ -45,7 +45,7 @@ extension GalleryRouter: GalleryCoordinatorProtocol  {
                                               cacheService: imageCacheService)
         
         // view model
-        let galleryViewModel = GalleryViewModel(coordinator: self,
+        let galleryViewModel = GalleryViewModel(router: self,
                                                 redditPostRepository: redditPostRepository,
                                                 imageRepository: imageRepository)
         
@@ -61,7 +61,7 @@ extension GalleryRouter: GalleryCoordinatorProtocol  {
         let fileService = FileService()
         
         // view model
-        let settingsViewModel = GallerySettingsViewModel(coordinator: self,
+        let settingsViewModel = GallerySettingsViewModel(router: self,
                                                          fileService: fileService)
                 
         // view model injection
@@ -81,7 +81,7 @@ extension GalleryRouter: GalleryCoordinatorProtocol  {
                                               cacheService: imageCacheService)
         
         // view model
-        let viewModel = GalleryDetailViewModel(coordinator: self,
+        let viewModel = GalleryDetailViewModel(router: self,
                                                imageRepository: imageRepository,
                                                post: post)
         

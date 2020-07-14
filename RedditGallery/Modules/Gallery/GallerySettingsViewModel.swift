@@ -12,7 +12,7 @@ import RxCocoa
 
 final class GallerySettingsViewModel: GallerySettingsViewModelProtocol{
     
-    private unowned let coordinator: GalleryCoordinatorProtocol
+    private unowned let router: GalleryRouterProtocol
     
     private let fileService: FileServiceProtocol
     private let disposeBag: DisposeBag
@@ -27,10 +27,10 @@ final class GallerySettingsViewModel: GallerySettingsViewModelProtocol{
         return self.dataCacheRelay.asObservable()
     }
     
-    required init(coordinator: GalleryCoordinatorProtocol,
+    required init(router: GalleryRouterProtocol,
                   fileService: FileServiceProtocol) {
         
-        self.coordinator = coordinator
+        self.router = router
         self.fileService = fileService
         self.disposeBag = DisposeBag()
         self.imageCacheRelay = BehaviorRelay<Double>(value: 0.0)

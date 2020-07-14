@@ -12,7 +12,7 @@ import RxCocoa
 
 final class GalleryDetailViewModel: GalleryDetailViewModelProtocol{
     
-    private unowned let coordinator: GalleryCoordinatorProtocol
+    private unowned let router: GalleryRouterProtocol
     
     private let imageRepository: ImageRepositoryProtocol
     private let post: Post
@@ -28,11 +28,11 @@ final class GalleryDetailViewModel: GalleryDetailViewModelProtocol{
         return titleDataRelay.asObservable()
     }
     
-    required init(coordinator: GalleryCoordinatorProtocol,
+    required init(router: GalleryRouterProtocol,
                   imageRepository: ImageRepositoryProtocol,
                   post: Post) {
         
-        self.coordinator = coordinator
+        self.router = router
         self.imageRepository = imageRepository
         self.post = post
         self.disposeBag = DisposeBag()

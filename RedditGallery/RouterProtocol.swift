@@ -1,5 +1,5 @@
 //
-//  MainCoordinatorProtocol.swift
+//  RouterProtocol.swift
 //  RedditGallery
 //
 //  Created by Andrea Cerra on 7/11/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol CoordinatorProtocol: class {
+protocol RouterProtocol: class {
     
-    static func initCoordinator() -> UIViewController
+    static func initRouter() -> UIViewController
 }

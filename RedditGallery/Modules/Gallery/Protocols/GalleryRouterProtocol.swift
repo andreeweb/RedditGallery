@@ -1,5 +1,5 @@
 //
-//  GalleryCoordinatorProtocol.swift
+//  GalleryRouterProtocol.swift
 //  RedditGallery
 //
 //  Created by Andrea Cerra on 7/11/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol GalleryCoordinatorProtocol: CoordinatorProtocol {
+protocol GalleryRouterProtocol: RouterProtocol {
     
     /// Method used for navigate to the detail page
     ///

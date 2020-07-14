@@ -1,5 +1,5 @@
 //
-//  GalleryCoordinatorMock.swift
+//  GalleryRouterMock.swift
 //  RedditGallery
 //
 //  Created by Andrea Cerra on 7/13/20.

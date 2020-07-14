@@ -15,8 +15,8 @@ class Coordinator: UIViewController {
     init() {
         
         // define here the app entry point
-        let galleryCoordinator = GalleryCoordinator.initCoordinator()
-        current = galleryCoordinator
+        let galleryRouter = GalleryRouter.initRouter()
+        current = galleryRouter
         
         super.init(nibName: nil, bundle: nil)
     }

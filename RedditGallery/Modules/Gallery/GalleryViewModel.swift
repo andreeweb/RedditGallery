@@ -12,7 +12,7 @@ import RxCocoa
 
 final class GalleryViewModel: GalleryViewModelProtocol {
     
-    private unowned let coordinator: GalleryCoordinatorProtocol
+    private unowned let router: GalleryRouterProtocol
     
     private let redditPostRepository: RedditPostRepositoryProtocol
     private let imageRepository: ImageRepositoryProtocol
@@ -23,11 +23,11 @@ final class GalleryViewModel: GalleryViewModelProtocol {
         return tableDataRelay.asObservable()
     }
     
-    required init(coordinator: GalleryCoordinatorProtocol,
+    required init(router: GalleryRouterProtocol,
                   redditPostRepository: RedditPostRepositoryProtocol,
                   imageRepository: ImageRepositoryProtocol) {
         
-        self.coordinator = coordinator
+        self.router = router
         self.redditPostRepository = redditPostRepository
         self.imageRepository = imageRepository
         self.disposeBag = DisposeBag()
@@ -76,6 +76,6 @@ final class GalleryViewModel: GalleryViewModelProtocol {
         
         let selectedObj = tableDataRelay.value[indexPath.row]
         
-        coordinator.navigateToDetailView(post: selectedObj)
+        router.navigateToDetailView(post: selectedObj)
     }
 }

@@ -40,7 +40,7 @@ class GalleryViewModelTest: XCTestCase {
                                               cacheService: imageCacheService)
         
         // view model
-        let galleryViewModel = GalleryViewModel(coordinator: GalleryCoordinatorMock(),
+        let galleryViewModel = GalleryViewModel(router: GalleryRouterMock(),
                                                 redditPostRepository: redditPostRepository,
                                                 imageRepository: imageRepository)
         

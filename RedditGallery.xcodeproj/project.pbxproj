@@ -17,13 +17,13 @@
 		1D27B43224B9D2A2000AEC9B /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B43124B9D2A2000AEC9B /* GalleryViewModel.swift */; };
 		1D27B43524B9D2C3000AEC9B /* GalleryViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B43424B9D2C3000AEC9B /* GalleryViewModelProtocol.swift */; };
 		1D27B43724B9D2D5000AEC9B /* GalleryViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B43624B9D2D5000AEC9B /* GalleryViewControllerProtocol.swift */; };
-		1D27B43C24B9D521000AEC9B /* GalleryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B43B24B9D521000AEC9B /* GalleryCoordinator.swift */; };
-		1D27B43E24B9D52F000AEC9B /* GalleryCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B43D24B9D52F000AEC9B /* GalleryCoordinatorProtocol.swift */; };
+		1D27B43C24B9D521000AEC9B /* GalleryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B43B24B9D521000AEC9B /* GalleryRouter.swift */; };
+		1D27B43E24B9D52F000AEC9B /* GalleryRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B43D24B9D52F000AEC9B /* GalleryRouterProtocol.swift */; };
 		1D27B44224B9D65B000AEC9B /* GallerySettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B44124B9D65B000AEC9B /* GallerySettingsViewController.swift */; };
 		1D27B44424B9D668000AEC9B /* GallerySettingsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B44324B9D668000AEC9B /* GallerySettingsViewControllerProtocol.swift */; };
 		1D27B44624B9D691000AEC9B /* GallerySettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B44524B9D691000AEC9B /* GallerySettingsViewModel.swift */; };
 		1D27B44824B9D6B1000AEC9B /* GallerySettingsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B44724B9D6B1000AEC9B /* GallerySettingsViewModelProtocol.swift */; };
-		1D27B44A24B9DB7A000AEC9B /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B44924B9DB7A000AEC9B /* CoordinatorProtocol.swift */; };
+		1D27B44A24B9DB7A000AEC9B /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B44924B9DB7A000AEC9B /* RouterProtocol.swift */; };
 		1D27B44D24B9E1AA000AEC9B /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B44C24B9E1AA000AEC9B /* UIStoryboardExtension.swift */; };
 		1D27B44F24B9F3AC000AEC9B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B44E24B9F3AC000AEC9B /* Post.swift */; };
 		1D27B46824B9FB19000AEC9B /* RedditService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B46524B9FB19000AEC9B /* RedditService.swift */; };
@@ -38,7 +38,7 @@
 		1D27B47C24BA1863000AEC9B /* HTTPServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D27B47024B9FEC7000AEC9B /* HTTPServiceProtocol.swift */; };
 		1D41723C24BCF54500F11C45 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D41723E24BCF54500F11C45 /* Localizable.strings */; };
 		1D41724024BCF86C00F11C45 /* GalleryViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41723F24BCF86C00F11C45 /* GalleryViewModelTest.swift */; };
-		1D41724224BCFA1300F11C45 /* GalleryCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41724124BCFA1300F11C45 /* GalleryCoordinatorMock.swift */; };
+		1D41724224BCFA1300F11C45 /* GalleryRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D41724124BCFA1300F11C45 /* GalleryRouterMock.swift */; };
 		1D8997D224B8E54500003315 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8997D124B8E54500003315 /* AppDelegate.swift */; };
 		1D8997D424B8E54500003315 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8997D324B8E54500003315 /* SceneDelegate.swift */; };
 		1D8997DB24B8E54500003315 /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8997D924B8E54500003315 /* Gallery.storyboard */; };
@@ -110,13 +110,13 @@
 		1D27B43124B9D2A2000AEC9B /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		1D27B43424B9D2C3000AEC9B /* GalleryViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModelProtocol.swift; sourceTree = "<group>"; };
 		1D27B43624B9D2D5000AEC9B /* GalleryViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewControllerProtocol.swift; sourceTree = "<group>"; };
-		1D27B43B24B9D521000AEC9B /* GalleryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCoordinator.swift; sourceTree = "<group>"; };
-		1D27B43D24B9D52F000AEC9B /* GalleryCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		1D27B43B24B9D521000AEC9B /* GalleryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRouter.swift; sourceTree = "<group>"; };
+		1D27B43D24B9D52F000AEC9B /* GalleryRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRouterProtocol.swift; sourceTree = "<group>"; };
 		1D27B44124B9D65B000AEC9B /* GallerySettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallerySettingsViewController.swift; sourceTree = "<group>"; };
 		1D27B44324B9D668000AEC9B /* GallerySettingsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallerySettingsViewControllerProtocol.swift; sourceTree = "<group>"; };
 		1D27B44524B9D691000AEC9B /* GallerySettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallerySettingsViewModel.swift; sourceTree = "<group>"; };
 		1D27B44724B9D6B1000AEC9B /* GallerySettingsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallerySettingsViewModelProtocol.swift; sourceTree = "<group>"; };
-		1D27B44924B9DB7A000AEC9B /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		1D27B44924B9DB7A000AEC9B /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		1D27B44C24B9E1AA000AEC9B /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
 		1D27B44E24B9F3AC000AEC9B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Post.swift; path = RedditGallery/Entities/Post.swift; sourceTree = SOURCE_ROOT; };
 		1D27B46524B9FB19000AEC9B /* RedditService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditService.swift; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 		1D27B47924BA170D000AEC9B /* HTTPServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPServiceMock.swift; sourceTree = "<group>"; };
 		1D41723D24BCF54500F11C45 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1D41723F24BCF86C00F11C45 /* GalleryViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModelTest.swift; sourceTree = "<group>"; };
-		1D41724124BCFA1300F11C45 /* GalleryCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCoordinatorMock.swift; sourceTree = "<group>"; };
+		1D41724124BCFA1300F11C45 /* GalleryRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryRouterMock.swift; sourceTree = "<group>"; };
 		1D8997CE24B8E54500003315 /* RedditGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedditGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8997D124B8E54500003315 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D8997D324B8E54500003315 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -226,7 +226,7 @@
 				1D272E3824BE0F9D004BC28C /* GalleryDetailViewModel.swift */,
 				1D27B44124B9D65B000AEC9B /* GallerySettingsViewController.swift */,
 				1D27B44524B9D691000AEC9B /* GallerySettingsViewModel.swift */,
-				1D27B43B24B9D521000AEC9B /* GalleryCoordinator.swift */,
+				1D27B43B24B9D521000AEC9B /* GalleryRouter.swift */,
 				1DE9453824BB8A14002146E0 /* PostCollectionViewCell.swift */,
 			);
 			path = Gallery;
@@ -235,7 +235,7 @@
 		1D27B43324B9D2A6000AEC9B /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				1D27B43D24B9D52F000AEC9B /* GalleryCoordinatorProtocol.swift */,
+				1D27B43D24B9D52F000AEC9B /* GalleryRouterProtocol.swift */,
 				1D27B43624B9D2D5000AEC9B /* GalleryViewControllerProtocol.swift */,
 				1D27B43424B9D2C3000AEC9B /* GalleryViewModelProtocol.swift */,
 				1D27B44324B9D668000AEC9B /* GallerySettingsViewControllerProtocol.swift */,
@@ -305,7 +305,7 @@
 			children = (
 				1D27B47924BA170D000AEC9B /* HTTPServiceMock.swift */,
 				1DE9453124BB6BEE002146E0 /* RedditServiceMock.swift */,
-				1D41724124BCFA1300F11C45 /* GalleryCoordinatorMock.swift */,
+				1D41724124BCFA1300F11C45 /* GalleryRouterMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -337,7 +337,7 @@
 			children = (
 				1D8997D124B8E54500003315 /* AppDelegate.swift */,
 				1D8997D324B8E54500003315 /* SceneDelegate.swift */,
-				1D27B44924B9DB7A000AEC9B /* CoordinatorProtocol.swift */,
+				1D27B44924B9DB7A000AEC9B /* RouterProtocol.swift */,
 				1D27B42A24B9D08E000AEC9B /* Coordinator.swift */,
 				1D27B44B24B9E196000AEC9B /* Extension */,
 				1DE944F224BA2D25002146E0 /* Entities */,
@@ -749,11 +749,11 @@
 			files = (
 				1D272E3B24BE0FAA004BC28C /* GalleryDetailViewModelProtocol.swift in Sources */,
 				1DE9450524BA6BC5002146E0 /* RedditCacheConfig.swift in Sources */,
-				1D41724224BCFA1300F11C45 /* GalleryCoordinatorMock.swift in Sources */,
+				1D41724224BCFA1300F11C45 /* GalleryRouterMock.swift in Sources */,
 				1DE9452124BB4866002146E0 /* ImageCacheConfig.swift in Sources */,
 				1D27B43524B9D2C3000AEC9B /* GalleryViewModelProtocol.swift in Sources */,
 				1DE9450124BA5F89002146E0 /* RedditCacheServiceErrorBuilder.swift in Sources */,
-				1D27B43E24B9D52F000AEC9B /* GalleryCoordinatorProtocol.swift in Sources */,
+				1D27B43E24B9D52F000AEC9B /* GalleryRouterProtocol.swift in Sources */,
 				1DE9453024BB6993002146E0 /* PostData.swift in Sources */,
 				1D272E3724BE0F8A004BC28C /* GalleryDetailViewController.swift in Sources */,
 				1D27B43224B9D2A2000AEC9B /* GalleryViewModel.swift in Sources */,
@@ -780,7 +780,7 @@
 				1D27B46F24B9FEBD000AEC9B /* HTTPService.swift in Sources */,
 				1D27B47124B9FEC7000AEC9B /* HTTPServiceProtocol.swift in Sources */,
 				1DE9453F24BCBB64002146E0 /* ImageRepositoryErrorBuilder.swift in Sources */,
-				1D27B44A24B9DB7A000AEC9B /* CoordinatorProtocol.swift in Sources */,
+				1D27B44A24B9DB7A000AEC9B /* RouterProtocol.swift in Sources */,
 				1D27B44F24B9F3AC000AEC9B /* Post.swift in Sources */,
 				1D27B47324BA0037000AEC9B /* HTTPServiceErrorBuilder.swift in Sources */,
 				1DE9452C24BB5001002146E0 /* ImageServiceProtocol.swift in Sources */,
@@ -800,7 +800,7 @@
 				1DE9452B24BB5001002146E0 /* ImageServiceErrorBuilder.swift in Sources */,
 				1DE944FB24BA5457002146E0 /* RedditCacheServiceProtocol.swift in Sources */,
 				1DE944F124BA2AA8002146E0 /* TopPosts.swift in Sources */,
-				1D27B43C24B9D521000AEC9B /* GalleryCoordinator.swift in Sources */,
+				1D27B43C24B9D521000AEC9B /* GalleryRouter.swift in Sources */,
 				1DE944E924BA2513002146E0 /* JData.swift in Sources */,
 				1DE944F324BA4C00002146E0 /* HTTPServiceMock.swift in Sources */,
 			);
