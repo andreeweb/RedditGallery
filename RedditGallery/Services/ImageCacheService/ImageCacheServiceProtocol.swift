@@ -11,7 +11,7 @@ import RxSwift
 
 protocol ImageCacheServiceProtocol {
     
-    /// Retrieve from the cache the image requested
+    /// Retrieves from the cache the image requested
     /// The URL should be the same of the web request
     ///
     /// - Parameter imageURl: image url
@@ -26,7 +26,7 @@ protocol ImageCacheServiceProtocol {
     /// - Parameter image: image to be cached
     func storeImageInCache(imageURL: String, image: UIImage) -> Completable
     
-    /// This function remove from the local cache
+    /// This function removes from the local cache
     /// the referenced image by the url passed
     ///
     /// - Parameter keyword: reddit keyword

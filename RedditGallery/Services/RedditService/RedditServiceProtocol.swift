@@ -11,7 +11,7 @@ import RxSwift
 
 protocol RedditServiceProtocol {
         
-    /// This function retrieve from the web
+    /// This function retrieves from the web
     /// the latest reddit top posts based on the keyword passed
     ///
     /// - Parameter keyword: reddit keyword

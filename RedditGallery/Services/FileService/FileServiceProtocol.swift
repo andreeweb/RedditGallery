@@ -10,7 +10,7 @@ import Foundation
 
 protocol FileServiceProtocol {
     
-    /// It retrieve the documents directory path and
+    /// It retrieves the documents directory path and
     /// append to that path the subPath parameter.
     ///
     /// If the directory doesn't exist it will be created.
@@ -19,13 +19,13 @@ protocol FileServiceProtocol {
     /// - Returns: Path URL
     func getDirectoryPath(subPath: String) throws -> URL
     
-    /// Return the directory size at the path provided  in bytes
+    /// Returns the directory size at the path provided  in bytes
     ///
     /// - Parameter path: directory path
     /// - Returns: Directory size
     func getDirectorySize(path: URL) throws -> Double
 
-    /// Remove the directory at the path provided
+    /// Removes the directory at the path provided
     ///
     /// - Parameter path: directory path
     func deleteDirectory(path: URL) throws

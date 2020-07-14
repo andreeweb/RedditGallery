@@ -10,5 +10,6 @@ import Foundation
 
 enum ImageCacheConfig {
     
+    /// Local cache directory
     static let cacheFolder = "imageCache"
 }

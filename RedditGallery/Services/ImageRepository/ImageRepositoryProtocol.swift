@@ -11,9 +11,9 @@ import RxSwift
 
 protocol ImageRepositoryProtocol {
     
-    /// This function retrieve the image linked by the url from the web.
+    /// This function retrieves the image linked by the url from the web.
     /// If during the request something goes wrong, this function will
-    /// return data from the local cache, if available.
+    /// returns data from the local cache, if available.
     ///
     /// - Parameter keyword: filter keyword for the posts
     /// - Returns: Array of reddit posts.

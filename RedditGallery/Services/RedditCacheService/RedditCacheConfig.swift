@@ -10,5 +10,6 @@ import Foundation
 
 enum RedditCacheConfig {
     
+    // Local cache directory
     static let cacheFolder = "redditCache"
 }

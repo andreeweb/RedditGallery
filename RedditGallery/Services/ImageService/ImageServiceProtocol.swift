@@ -11,7 +11,7 @@ import RxSwift
 
 protocol ImageServiceProtocol {
     
-    /// Download and return UIImage from the URL passed.
+    /// Download and returns UIImage from the URL passed.
     ///
     /// - Parameter imageUrl: image url
     /// - Returns: Parsed JSON as a TopPosts entity

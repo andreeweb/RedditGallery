@@ -16,9 +16,9 @@ enum CacheOption {
 
 protocol RedditPostRepositoryProtocol {
     
-    /// This function retrieve the latest reddit posts from the web.
+    /// This function retrieves the latest reddit posts from the web.
     /// If during the request something goes wrong, this function will
-    /// return data from the local cache, if available.
+    /// returns data from the local cache, if available.
     ///
     /// - Parameter keyword: filter keyword for the posts
     /// - Returns: Array of reddit posts.
